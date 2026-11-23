@@ -1,0 +1,5 @@
+{
+  "name": "marexec-ping",
+  "owner": { "name": "Joe Olive" },
+  "plugins": [{ "name": "marexec-ping", "source": "./" }]
+}

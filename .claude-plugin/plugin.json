@@ -1,0 +1,38 @@
+{
+  "name": "marexec-ping",
+  "version": "0.3.0-marexec.1",
+  "description": "Checks a shared Linear team every few minutes, signed in to Linear as you (or through Aperture), and wakes the watching Claude session when the other side comments or hands an issue back to you.",
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "team": {
+      "type": "string",
+      "title": "Linear team",
+      "description": "The shared Linear team to watch.",
+      "default": "Marco - Exec"
+    },
+    "connector": {
+      "type": "string",
+      "title": "Linear connector name (Aperture only)",
+      "description": "Leave empty for Linear's own server. With Aperture: its name for the Linear connection that holds the shared board, usually Linear (or another name such as Linearjoe). /marexec-connector changes it from the chat.",
+      "default": ""
+    },
+    "interval_minutes": {
+      "type": "number",
+      "title": "Minutes between checks",
+      "description": "How often to check Linear.",
+      "default": 10
+    },
+    "mcp_url": {
+      "type": "string",
+      "title": "Linear MCP address",
+      "description": "Linear's own server (sign in once with /marexec-login). For Aperture instead, use its address, e.g. http://aperture/v1/mcp, and set the connector name.",
+      "default": "https://mcp.linear.app/mcp"
+    },
+    "python": {
+      "type": "string",
+      "title": "Python command",
+      "description": "Leave empty to try python3, then python.",
+      "default": ""
+    }
+  }
+}
